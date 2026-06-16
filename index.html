@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ZeroTwoCode Exam Portal</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="registerBox" class="card">
+
+<h1>ZeroTwoCode</h1>
+
+<h3>Student Registration</h3>
+
+<input type="text" id="regName" placeholder="Full Name">
+
+<input type="email" id="regEmail" placeholder="Email">
+
+<input type="password" id="regPassword" placeholder="Password">
+
+<button onclick="registerStudent()">
+
+Register
+
+</button>
+
+<p>
+
+Already have account?
+
+<a href="#" onclick="showLogin()">
+
+Login
+
+</a>
+
+</p>
+
+</div>
+
+
+
+<div id="loginBox"
+
+class="card"
+
+style="display:none;">
+
+<h1>Student Login</h1>
+
+<input type="email"
+
+id="loginEmail"
+
+placeholder="Email">
+
+
+<input type="password"
+
+id="loginPassword"
+
+placeholder="Password">
+
+
+<button onclick="loginStudent()">
+
+Login
+
+</button>
+
+</div>
+
+
+
+<div id="examBox"
+
+style="display:none;">
+
+<h2>
+
+Exam Questions
+
+</h2>
+
+
+<div id="questions">
+
+</div>
+
+
+<button onclick="submitTest()">
+
+Submit Test
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

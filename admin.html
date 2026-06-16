@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ZeroTwoCode Admin Panel</title>
+
+<link rel="stylesheet" href="admin.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+<body>
+
+<div id="loginBox" class="card">
+
+<h1>Admin Login</h1>
+
+<input type="email" id="email" placeholder="Admin Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="adminLogin()">
+
+Login
+
+</button>
+
+</div>
+
+
+
+<div id="dashboard" style="display:none;">
+
+<h1>ZeroTwoCode Admin Panel</h1>
+
+<button onclick="showAddQuestion()">
+
+Add Question
+
+</button>
+
+<button onclick="viewQuestions()">
+
+View Questions
+
+</button>
+
+<button onclick="viewStudents()">
+
+Students
+
+</button>
+
+<button onclick="viewAnswers()">
+
+Submissions
+
+</button>
+
+<button onclick="logout()">
+
+Logout
+
+</button>
+
+
+<div id="content"></div>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
