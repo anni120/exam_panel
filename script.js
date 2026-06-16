@@ -170,6 +170,7 @@ function startExam() {
     document.documentElement.requestFullscreen();
 
     loadQuestions();
+    startTimer();
 
 }
 
@@ -610,3 +611,46 @@ document.addEventListener(
     }
 
 );
+
+
+// ===== 90 Minutes Timer =====
+
+let totalTime = 90 * 60; // 90 minute = 5400 seconds
+
+function startTimer() {
+
+const timer = setInterval(() => {
+
+let minutes = Math.floor(totalTime / 60);
+
+let seconds = totalTime % 60;
+
+document.getElementById("timer").innerHTML =
+minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+
+
+totalTime--;
+
+
+if(totalTime < 0){
+
+clearInterval(timer);
+
+alert("Time Over!");
+
+submitTest();
+
+}
+
+},1000);
+
+}
+
+
+if(!localStorage.getItem("endTime")){
+
+let end = Date.now() + 90*60*1000;
+
+localStorage.setItem("endTime",end);
+
+}
